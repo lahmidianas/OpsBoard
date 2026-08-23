@@ -14,6 +14,8 @@
 - Added `/services/[id]` service detail pages with related incidents and recent check runs.
 - Added Supabase schema migration and seed SQL.
 - Added Supabase environment example.
+- Moved Supabase files to the repo root so `supabase db push` works from the linked project.
+- Applied schema and demo seed migrations to the remote Supabase database.
 
 ### Verified
 

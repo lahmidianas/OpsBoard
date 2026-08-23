@@ -30,10 +30,15 @@ PUBLIC_SUPABASE_URL=https://hpbfscnvnuwsbtmomctl.supabase.co
 PUBLIC_SUPABASE_ANON_KEY=your_publishable_key
 ```
 
-Apply the SQL files in Supabase:
+Apply migrations after linking the project:
 
-1. Run `app/supabase/migrations/20260823183000_initial_schema.sql`
-2. Run `app/supabase/seed.sql`
+```bash
+supabase login
+supabase link --project-ref hpbfscnvnuwsbtmomctl
+supabase db push
+```
+
+`supabase/seed.sql` mirrors the demo seed migration for manual reseeding if needed.
 
 ## Current Status
 
