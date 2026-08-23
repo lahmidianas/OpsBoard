@@ -6,6 +6,7 @@ app/.svelte-kit
 app/build
 app/.vercel
 app/.netlify
+app/supabase/.temp
 
 # Local secrets
 .env

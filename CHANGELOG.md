@@ -12,6 +12,8 @@
 - Split the app into `/dashboard`, `/services`, `/incidents`, and `/incidents/[id]`.
 - Moved shared demo services, incidents, check runs, and timeline data into `app/src/lib/demo.ts`.
 - Added `/services/[id]` service detail pages with related incidents and recent check runs.
+- Added Supabase schema migration and seed SQL.
+- Added Supabase environment example.
 
 ### Verified
 
@@ -21,5 +23,4 @@
 
 ### Next
 
-- Add Supabase schema.
 - Connect dashboard pages to real database data.
