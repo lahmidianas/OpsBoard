@@ -53,7 +53,9 @@
 				<tbody class="divide-y divide-slate-100">
 					{#each services as service}
 						<tr class="hover:bg-slate-50">
-							<td class="px-4 py-3 font-medium">{service.name}</td>
+							<td class="px-4 py-3 font-medium">
+								<a class="hover:underline" href={`/services/${service.id}`}>{service.name}</a>
+							</td>
 							<td class="px-4 py-3 text-slate-600">{service.team}</td>
 							<td class="px-4 py-3 text-slate-600">{service.env}</td>
 							<td class="px-4 py-3">

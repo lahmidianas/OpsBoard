@@ -11,15 +11,15 @@
 - Built the first dashboard UI with static demo data.
 - Split the app into `/dashboard`, `/services`, `/incidents`, and `/incidents/[id]`.
 - Moved shared demo services, incidents, check runs, and timeline data into `app/src/lib/demo.ts`.
+- Added `/services/[id]` service detail pages with related incidents and recent check runs.
 
 ### Verified
 
 - `npm.cmd run check`
 - `npm.cmd run build`
-- `/dashboard`, `/services`, `/incidents`, and `/incidents/inc-1001` return `200` locally.
+- `/dashboard`, `/services`, `/services/media-uploads`, `/incidents`, and `/incidents/inc-1001` return `200` locally.
 
 ### Next
 
-- Add service detail pages.
 - Add Supabase schema.
 - Connect dashboard pages to real database data.
