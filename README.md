@@ -23,12 +23,16 @@ Open `http://127.0.0.1:5173/`.
 
 ## Current Status
 
-- Static dashboard UI
+- Routed dashboard UI
 - Seeded in-file demo data
+- Services and incidents pages
+- Incident detail pages
 - Build and Svelte checks passing
+
+See [CHANGELOG.md](CHANGELOG.md) for progress notes.
 
 ## Next
 
-- Add routes for services and incidents
+- Add service detail pages
 - Add Supabase schema
 - Connect dashboard to real data
