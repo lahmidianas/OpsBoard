@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { incidents, severityClass, statusClass } from '$lib/demo';
+	import { severityClass, statusClass } from '$lib/demo';
+
+	let { data } = $props();
 </script>
 
 <svelte:head>
@@ -14,7 +16,7 @@
 <section class="mt-6 rounded-lg border border-slate-200 bg-white">
 	<div class="flex items-center justify-between border-b border-slate-200 px-4 py-3">
 		<h2 class="font-semibold">Open incidents</h2>
-		<span class="text-sm text-slate-500">{incidents.length} active</span>
+		<span class="text-sm text-slate-500">{data.incidents.length} active</span>
 	</div>
 
 	<div class="overflow-x-auto">
@@ -31,7 +33,7 @@
 				</tr>
 			</thead>
 			<tbody class="divide-y divide-slate-100">
-				{#each incidents as incident}
+				{#each data.incidents as incident}
 					<tr class="hover:bg-slate-50">
 						<td class="px-4 py-3 font-medium">
 							<a class="hover:underline" href={`/incidents/${incident.id}`}>{incident.title}</a>

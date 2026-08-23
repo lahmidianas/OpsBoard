@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { incidents, metrics, services, severityClass, statusClass } from '$lib/demo';
+	import { severityClass, statusClass } from '$lib/demo';
+
+	let { data } = $props();
 </script>
 
 <svelte:head>
@@ -22,7 +24,7 @@
 </header>
 
 <div class="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-	{#each metrics as metric}
+	{#each data.metrics as metric}
 		<div class="rounded-lg border border-slate-200 bg-white p-4">
 			<p class="text-sm font-medium text-slate-500">{metric.label}</p>
 			<p class={`mt-2 text-3xl font-semibold ${metric.tone}`}>{metric.value}</p>
@@ -51,7 +53,7 @@
 					</tr>
 				</thead>
 				<tbody class="divide-y divide-slate-100">
-					{#each services as service}
+					{#each data.services as service}
 						<tr class="hover:bg-slate-50">
 							<td class="px-4 py-3 font-medium">
 								<a class="hover:underline" href={`/services/${service.id}`}>{service.name}</a>
@@ -75,11 +77,11 @@
 	<section class="rounded-lg border border-slate-200 bg-white">
 		<div class="flex items-center justify-between border-b border-slate-200 px-4 py-3">
 			<h2 class="font-semibold">Open incidents</h2>
-			<a class="text-sm font-medium text-slate-600 hover:text-slate-950" href="/incidents">{incidents.length} active</a>
+			<a class="text-sm font-medium text-slate-600 hover:text-slate-950" href="/incidents">{data.incidents.length} active</a>
 		</div>
 
 		<div class="divide-y divide-slate-100">
-			{#each incidents as incident}
+			{#each data.incidents as incident}
 				<a class="block p-4 hover:bg-slate-50" href={`/incidents/${incident.id}`}>
 					<div class="flex items-start justify-between gap-3">
 						<div>

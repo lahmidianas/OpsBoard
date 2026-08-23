@@ -16,6 +16,7 @@
 - Added Supabase environment example.
 - Moved Supabase files to the repo root so `supabase db push` works from the linked project.
 - Applied schema and demo seed migrations to the remote Supabase database.
+- Connected SvelteKit server loads to Supabase reads with local demo-data fallback.
 
 ### Verified
 
@@ -25,4 +26,4 @@
 
 ### Next
 
-- Connect dashboard pages to real database data.
+- Add auth and write actions.

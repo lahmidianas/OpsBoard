@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { services, statusClass } from '$lib/demo';
+	import { statusClass } from '$lib/demo';
+
+	let { data } = $props();
 </script>
 
 <svelte:head>
@@ -14,7 +16,7 @@
 <section class="mt-6 rounded-lg border border-slate-200 bg-white">
 	<div class="flex items-center justify-between border-b border-slate-200 px-4 py-3">
 		<h2 class="font-semibold">Service inventory</h2>
-		<span class="text-sm text-slate-500">{services.length} services</span>
+		<span class="text-sm text-slate-500">{data.services.length} services</span>
 	</div>
 
 	<div class="overflow-x-auto">
@@ -30,7 +32,7 @@
 				</tr>
 			</thead>
 			<tbody class="divide-y divide-slate-100">
-				{#each services as service}
+				{#each data.services as service}
 					<tr class="hover:bg-slate-50">
 						<td class="px-4 py-3 font-medium">
 							<a class="hover:underline" href={`/services/${service.id}`}>{service.name}</a>

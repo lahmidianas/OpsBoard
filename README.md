@@ -43,7 +43,7 @@ supabase db push
 ## Current Status
 
 - Routed dashboard UI
-- Seeded in-file demo data
+- Supabase-backed reads with local demo-data fallback
 - Supabase schema and seed SQL
 - Services and incidents pages
 - Service detail pages
@@ -54,4 +54,4 @@ See [CHANGELOG.md](CHANGELOG.md) for progress notes.
 
 ## Next
 
-- Connect dashboard to real data
+- Add auth and write actions
